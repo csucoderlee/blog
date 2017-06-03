@@ -1,0 +1,1 @@
+banner.txt内容约定可以替换boot启动时输出的springboot文字图片
