@@ -1,6 +1,7 @@
 package org.csu.blog.service.impl;
 
 import org.csu.blog.dao.mybatis.AccountMapper;
+import org.csu.blog.domain.Account;
 import org.csu.blog.service.IAccountService;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,11 @@ public class AccountService implements IAccountService {
     AccountMapper accountMapper;
 
     @Override
-    public void login(String username, String password) {
-        accountMapper.findByUsername(username, password);
+    public boolean login(String username, String password) {
+        Account account = accountMapper.findByUsername(username, password);
+        if (null != account) {
+            return true;
+        }
+        return false;
     }
 }

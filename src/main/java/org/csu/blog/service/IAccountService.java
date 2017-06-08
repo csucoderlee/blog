@@ -5,5 +5,5 @@ package org.csu.blog.service;
  */
 public interface IAccountService {
 
-    void login(String username, String password);
+    boolean login(String username, String password);
 }

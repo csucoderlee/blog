@@ -18,8 +18,7 @@ public class AccountController {
 
     @GetMapping("/login")
     public Object login(String username, String password) {
-        accountService.login(username, password);
-        return null;
+        return accountService.login(username, password);
 
     }
 }
