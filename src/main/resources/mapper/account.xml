@@ -11,6 +11,6 @@
 
 
     <select id="findByUsername" resultMap="account">
-        SELECT * FROM account where user_name = #{param1} and pass_word = #{param2}
+        SELECT * FROM account where user_name = #{username} and pass_word = #{password}
     </select>
 </mapper>

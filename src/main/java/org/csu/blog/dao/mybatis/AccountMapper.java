@@ -1,6 +1,7 @@
 package org.csu.blog.dao.mybatis;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.csu.blog.domain.Account;
 import org.springframework.stereotype.Repository;
 
@@ -13,5 +14,5 @@ import java.util.List;
 @Mapper
 public interface AccountMapper {
 
-    Account findByUsername(String username, String password);
+    Account findByUsername(@Param("username") String username, @Param("password") String password);
 }
